@@ -4,6 +4,7 @@ package com.bob.Datastructures;
 import com.bob.Datastructures.BubbleSort.BubbleSortArray;
 import com.bob.Datastructures.InsertionSort.InsertionSortArray;
 import com.bob.Datastructures.SelectionSort.SelectionSortArray;
+import com.bob.Datastructures.ShellSort.ShellSortArray;
 import com.bob.Datastructures.Utils.SortingInterface;
 
 public class App 
@@ -23,13 +24,18 @@ public class App
     	SortingInterface sortingInterface = new InsertionSortArray();
         sortingInterface.sortedArrayLogging(sortingInterface.sort(new int[] {20,35,-15,7,55,1,-22}));
     }
+	//SHell Sort 
+    static void shellSorting() {
+    	SortingInterface sortingInterface = new ShellSortArray();
+        sortingInterface.sortedArrayLogging(sortingInterface.sort(new int[] {20,35,-15,7,55,1,-22,45,99,33}));
+    }
     
     public static void main( String[] args )
     {
     	//bubbleSorting();
     	//selectionSorting();
-    	insertionSorting();
-    
+    	//insertionSorting();
+    	shellSorting();
     }
 
 }
