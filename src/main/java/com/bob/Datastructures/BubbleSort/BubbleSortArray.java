@@ -2,11 +2,11 @@ package com.bob.Datastructures.BubbleSort;
 
 import org.springframework.stereotype.Component;
 
-import com.bob.Datastructures.Utils.SortingInterface;
+import com.bob.Datastructures.Utils.SortingUtil;
 import com.bob.Datastructures.Utils.SwapUtil;
 
 @Component
-public class BubbleSortArray  implements SortingInterface{
+public class BubbleSortArray  extends SortingUtil{
 	
 	SwapUtil swapUtil = new SwapUtil();
 
@@ -20,12 +20,6 @@ public class BubbleSortArray  implements SortingInterface{
 		}
 		
 		return unsortedArray;
-	}
-	
-	public void sortedArrayLogging(int [] sortedArray) {
-		for(int i=0; i< sortedArray.length; i++) {
-        	System.out.println(sortedArray[i]);
-        }
 	}
 	
 }

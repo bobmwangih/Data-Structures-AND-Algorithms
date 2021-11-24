@@ -5,29 +5,30 @@ import com.bob.Datastructures.BubbleSort.BubbleSortArray;
 import com.bob.Datastructures.InsertionSort.InsertionSortArray;
 import com.bob.Datastructures.SelectionSort.SelectionSortArray;
 import com.bob.Datastructures.ShellSort.ShellSortArray;
-import com.bob.Datastructures.Utils.SortingInterface;
+import com.bob.Datastructures.Utils.SortingUtil;
 
 public class App 
 {   
 	//Bubble Sort O(n2)Quadratic
     static void bubbleSorting() {
-    	SortingInterface sortingInterface = new BubbleSortArray();
-    	sortingInterface.sortedArrayLogging(sortingInterface.sort(new int[] {20,35,-15,7,55,1,-22}));
+    	SortingUtil sortingUtil = new BubbleSortArray();
+        sortingUtil.sortedArrayLogging(sortingUtil.sort(new int[] {20,35,-15,7,55,1,-22,45,99,33}));
     }
 	//Selection Sort O(n2)Quadratic
     static void selectionSorting() {
-    	SortingInterface sortingInterface = new SelectionSortArray();
-        sortingInterface.sortedArrayLogging(sortingInterface.sort(new int[] {20,35,-15,7,55,1,-22}));
+    	SortingUtil sortingUtil = new SelectionSortArray();
+        sortingUtil.sortedArrayLogging(sortingUtil.sort(new int[] {20,35,-15,7,55,1,-22,45,99,33}));
     }
 	//Insertion Sort O(n2)Quadratic
     static void insertionSorting() {
-    	SortingInterface sortingInterface = new InsertionSortArray();
-        sortingInterface.sortedArrayLogging(sortingInterface.sort(new int[] {20,35,-15,7,55,1,-22}));
+    	SortingUtil sortingUtil = new InsertionSortArray();
+        sortingUtil.sortedArrayLogging(sortingUtil.sort(new int[] {20,35,-15,7,55,1,-22,45,99,33}));
     }
 	//SHell Sort 
     static void shellSorting() {
-    	SortingInterface sortingInterface = new ShellSortArray();
-        sortingInterface.sortedArrayLogging(sortingInterface.sort(new int[] {20,35,-15,7,55,1,-22,45,99,33}));
+    	//SortingInterface sortingInterface = new ShellSortArray();
+    	SortingUtil sortingUtil = new ShellSortArray();
+        sortingUtil.sortedArrayLogging(sortingUtil.sort(new int[] {20,35,-15,7,55,1,-22,45,99,33}));
     }
     
     public static void main( String[] args )

@@ -1,8 +1,8 @@
 package com.bob.Datastructures.InsertionSort;
 
-import com.bob.Datastructures.Utils.SortingInterface;
+import com.bob.Datastructures.Utils.SortingUtil;
 
-public class InsertionSortArray implements SortingInterface {
+public class InsertionSortArray extends SortingUtil {
 
 	public int[] sort(int[] unsortedArray) {
 		for(int firstUnsortedIndex = 1; firstUnsortedIndex < unsortedArray.length;firstUnsortedIndex++) {
@@ -16,11 +16,5 @@ public class InsertionSortArray implements SortingInterface {
 		return unsortedArray;
 	}
 
-	public void sortedArrayLogging(int[] sortedArray) {
-		for(int i=0; i< sortedArray.length; i++) {
-        	System.out.println(sortedArray[i]);
-        }
-
-	}
 
 }

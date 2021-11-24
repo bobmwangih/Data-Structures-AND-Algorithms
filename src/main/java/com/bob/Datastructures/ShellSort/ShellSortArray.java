@@ -1,8 +1,9 @@
 package com.bob.Datastructures.ShellSort;
 
 import com.bob.Datastructures.Utils.SortingInterface;
+import com.bob.Datastructures.Utils.SortingUtil;
 
-public class ShellSortArray implements SortingInterface{
+public class ShellSortArray extends SortingUtil{
 
 	public int[] sort(int[] unsortedArray) {
 		for(int gap = unsortedArray.length/2; gap>0; gap/=2) {
@@ -17,13 +18,6 @@ public class ShellSortArray implements SortingInterface{
 			}
 		}
 		return unsortedArray;
-	}
-
-	public void sortedArrayLogging(int[] sortedArray) {
-		for(int i=0; i< sortedArray.length; i++) {
-        	System.out.println(sortedArray[i]);
-        }
-
 	}
 
 }

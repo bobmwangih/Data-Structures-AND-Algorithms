@@ -1,9 +1,9 @@
 package com.bob.Datastructures.SelectionSort;
 
-import com.bob.Datastructures.Utils.SortingInterface;
+import com.bob.Datastructures.Utils.SortingUtil;
 import com.bob.Datastructures.Utils.SwapUtil;
 
-public class SelectionSortArray implements SortingInterface {
+public class SelectionSortArray extends SortingUtil {
 
 	SwapUtil swapUtil = new SwapUtil();
 	
@@ -19,13 +19,6 @@ public class SelectionSortArray implements SortingInterface {
 			
 		}
 		return unsortedArray;
-	}
-
-	public void sortedArrayLogging(int[] sortedArray) {
-		for(int i=0; i< sortedArray.length; i++) {
-        	System.out.println(sortedArray[i]);
-        }
-		
 	}
 	
 }
