@@ -4,6 +4,7 @@ package com.bob.Datastructures;
 import com.bob.Datastructures.BubbleSort.BubbleSortArray;
 import com.bob.Datastructures.InsertionSort.InsertionSortArray;
 import com.bob.Datastructures.MergeSort.MergeSort;
+import com.bob.Datastructures.QuickSort.QuickSort;
 import com.bob.Datastructures.Recursion.Recursion;
 import com.bob.Datastructures.SelectionSort.SelectionSortArray;
 import com.bob.Datastructures.ShellSort.ShellSortArray;
@@ -40,8 +41,13 @@ public class App
 	//merge Sort 
     static void mergeSorting() {
     	SortingUtil sortingUtil = new MergeSort() ;
-    	((MergeSort) sortingUtil).mergeSort(sortingUtil.arrayGen(new int[1000]));
-    	System.out.println(((MergeSort) sortingUtil).toString());
+    	sortingUtil.print(sortingUtil.sort(sortingUtil.arrayGen(new int[1000])));
+    }
+    
+	//quick Sort average(O(log n)) worst (O (n2))
+    static void quickSorting() {
+    	SortingUtil sortingUtil = new QuickSort();
+    	sortingUtil.print(sortingUtil.sort(sortingUtil.arrayGen(new int[1000])));
     }
     
     public static void main( String[] args )
@@ -51,7 +57,8 @@ public class App
     	//insertionSorting();
     	//shellSorting();
     	//System.out.println(Recursion.recursion(3));
-    	mergeSorting();
+    	//mergeSorting();
+    	quickSorting();
     }
 
 }

@@ -9,8 +9,9 @@ public class MergeSort extends SortingUtil {
 	private int[] sortedArray = null;
 
 	public int[] sort(int[] unsortedArray) {
-		// TODO Auto-generated method stub
-		return null;
+		mergeSort(unsortedArray);
+		
+		return getSortedArray();
 	}
 	
 	public void mergeSort(int[] unsortedArray) {
