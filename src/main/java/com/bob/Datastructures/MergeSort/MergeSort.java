@@ -2,9 +2,9 @@ package com.bob.Datastructures.MergeSort;
 
 import java.util.Arrays;
 
-import com.bob.Datastructures.Utils.SortingInterface;
+import com.bob.Datastructures.Utils.SortingUtil;
 
-public class MergeSort implements SortingInterface {
+public class MergeSort extends SortingUtil {
 	
 	private int[] sortedArray = null;
 
@@ -66,14 +66,6 @@ public class MergeSort implements SortingInterface {
 		return inputArray;
 	}
 	
-
-	public void sortedArrayLogging(int[] sortedArray) {
-		for(int i=0; i< sortedArray.length; i++) {
-        	System.out.println(sortedArray[i]);
-        }
-		
-	}
-
 	public int[] getSortedArray() {
 		return sortedArray;
 	}

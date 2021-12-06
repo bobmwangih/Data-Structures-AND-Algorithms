@@ -17,31 +17,31 @@ public class App
 	//Bubble Sort O(n2)Quadratic
     static void bubbleSorting() {
     	SortingUtil sortingUtil = new BubbleSortArray();
-        sortingUtil.sortedArrayLogging(sortingUtil.sort(new int[] {20,35,-15,7,55,1,-22,45,99,33}));
+    	sortingUtil.print(sortingUtil.sort(sortingUtil.arrayGen(new int[1000])));
     }
 	//Selection Sort O(n2)Quadratic
     static void selectionSorting() {
     	SortingUtil sortingUtil = new SelectionSortArray();
-        sortingUtil.sortedArrayLogging(sortingUtil.sort(new int[] {20,35,-15,7,55,1,-22,45,99,33}));
+    	sortingUtil.print(sortingUtil.sort(sortingUtil.arrayGen(new int[1000])));
+    	
     }
 	//Insertion Sort O(n2)Quadratic
     static void insertionSorting() {
     	SortingUtil sortingUtil = new InsertionSortArray();
-        sortingUtil.sortedArrayLogging(sortingUtil.sort(new int[] {20,35,-15,7,55,1,-22,45,99,33}));
+    	sortingUtil.print(sortingUtil.sort(sortingUtil.arrayGen(new int[1000])));
     }
 	//SHell Sort 
     static void shellSorting() {
     	//SortingInterface sortingInterface = new ShellSortArray();
     	SortingUtil sortingUtil = new ShellSortArray();
-        sortingUtil.sortedArrayLogging(sortingUtil.sort(new int[] {20,35,-15,7,55,1,-22,45,99,33}));
+    	sortingUtil.print(sortingUtil.sort(sortingUtil.arrayGen(new int[1000])));
     }
     
 	//merge Sort 
     static void mergeSorting() {
-    	ArrayGenerator arrayGenerator = new ArrayGenerator();
-    	SortingInterface sortingInterface = new MergeSort() ;
-    	((MergeSort) sortingInterface).mergeSort(arrayGenerator.arrayGen(new int[1000]));
-    	System.out.println(((MergeSort) sortingInterface).toString());
+    	SortingUtil sortingUtil = new MergeSort() ;
+    	((MergeSort) sortingUtil).mergeSort(sortingUtil.arrayGen(new int[1000]));
+    	System.out.println(((MergeSort) sortingUtil).toString());
     }
     
     public static void main( String[] args )

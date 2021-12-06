@@ -1,10 +1,11 @@
 package com.bob.Datastructures.SelectionSort;
 
+import java.util.Arrays;
+
 import com.bob.Datastructures.Utils.SortingUtil;
 import com.bob.Datastructures.Utils.SwapUtil;
 
 public class SelectionSortArray extends SortingUtil {
-
 	SwapUtil swapUtil = new SwapUtil();
 	
 	public int[] sort(int[] unsortedArray) {
@@ -20,5 +21,5 @@ public class SelectionSortArray extends SortingUtil {
 		}
 		return unsortedArray;
 	}
-	
+		
 }
