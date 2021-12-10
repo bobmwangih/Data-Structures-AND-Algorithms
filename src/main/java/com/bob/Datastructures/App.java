@@ -2,6 +2,7 @@ package com.bob.Datastructures;
 
 
 import com.bob.Datastructures.BubbleSort.BubbleSortArray;
+import com.bob.Datastructures.CountingSort.CountingSort;
 import com.bob.Datastructures.InsertionSort.InsertionSortArray;
 import com.bob.Datastructures.MergeSort.MergeSort;
 import com.bob.Datastructures.QuickSort.QuickSort;
@@ -50,6 +51,12 @@ public class App
     	sortingUtil.print(sortingUtil.sort(sortingUtil.arrayGen(new int[1000])));
     }
     
+    //counting sort average-linear( ideal when the range of values in the array is equal to the no. of items )
+    static void countSorting() {
+    	SortingUtil sortingUtil  = new CountingSort();
+    	sortingUtil.print(sortingUtil.sort(sortingUtil.arrayGen(new int [1000])));
+    }
+    
     public static void main( String[] args )
     {
     	//bubbleSorting();
@@ -58,7 +65,8 @@ public class App
     	//shellSorting();
     	//System.out.println(Recursion.recursion(3));
     	//mergeSorting();
-    	quickSorting();
+    	//quickSorting();
+    	countSorting();
     }
 
 }

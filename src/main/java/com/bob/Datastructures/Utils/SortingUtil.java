@@ -12,7 +12,7 @@ public abstract class SortingUtil {
 	//logging sorted array
 	public void print(int []sortedArray) {
 		//return "SelectionSortArray [sortedArray=" + Arrays.toString(sortedArray) + "]";
-		System.out.println("SelectionSortArray [sortedArray=" + Arrays.toString(sortedArray) + "]");
+		System.out.println("SortedArray=" + Arrays.toString(sortedArray) + "]");
 	}
 	
 	
