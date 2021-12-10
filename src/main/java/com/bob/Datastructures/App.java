@@ -8,6 +8,7 @@ import com.bob.Datastructures.MergeSort.MergeSort;
 import com.bob.Datastructures.QuickSort.QuickSort;
 import com.bob.Datastructures.SelectionSort.SelectionSortArray;
 import com.bob.Datastructures.ShellSort.ShellSortArray;
+import com.bob.Datastructures.Utils.SortingInterface;
 import com.bob.Datastructures.Utils.SortingUtil;
 
 public class App 
@@ -15,8 +16,10 @@ public class App
 	
 	//Bubble Sort O(n2)Quadratic
     static void bubbleSorting() {
-    	SortingUtil sortingUtil = new BubbleSortArray();
-    	sortingUtil.print(sortingUtil.sort(sortingUtil.arrayGen(new int[1000])));
+    	@SuppressWarnings("rawtypes")
+		SortingInterface sortingUtil = new BubbleSortArray();
+    	sortingUtil.print(sortingUtil.sort(sortingUtil.arrayGen(new Object[1000])));
+    	sortingUtil.print(sortingUtil.sort(new String [] {"azimio","la","umoja","bila","bughudha"}));
     }
 	//Selection Sort O(n2)Quadratic
     static void selectionSorting() {
@@ -62,7 +65,7 @@ public class App
     
     public static void main( String[] args )
     {
-    	//bubbleSorting();
+    	bubbleSorting();
     	//selectionSorting();
     	//insertionSorting();
     	//shellSorting();
@@ -70,7 +73,7 @@ public class App
     	//mergeSorting();
     	//quickSorting();
     	//countSorting();
-    	radixSort();
+    	//radixSort();
     }
 
 }

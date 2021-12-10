@@ -11,7 +11,6 @@ public abstract class SortingUtil {
 	
 	//logging sorted array
 	public void print(int []sortedArray) {
-		//return "SelectionSortArray [sortedArray=" + Arrays.toString(sortedArray) + "]";
 		System.out.println("SortedArray=" + Arrays.toString(sortedArray) + "]");
 	}
 	
@@ -21,6 +20,7 @@ public abstract class SortingUtil {
 		for( int i=0; i< unsortedArray.length; i++ ) {
 			unsortedArray[i] = random.nextInt(10000);
 		}
+		System.out.println("Array to be sorted=" + Arrays.toString(unsortedArray) + "]");
 		return unsortedArray;
 		
 	}

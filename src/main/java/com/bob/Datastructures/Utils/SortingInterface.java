@@ -2,7 +2,8 @@ package com.bob.Datastructures.Utils;
 
 public interface SortingInterface {
 	
-	public int[] sort(int [] unsortedArray);
-	public void sortedArrayLogging(int [] sortedArray);
+	public Object[] sort(Object [] unsortedArray);
+	public void print(Object[] objects);
+	public Object[] arrayGen(Object[] unsortedArray);
 
 }
