@@ -6,11 +6,8 @@ import com.bob.Datastructures.CountingSort.CountingSort;
 import com.bob.Datastructures.InsertionSort.InsertionSortArray;
 import com.bob.Datastructures.MergeSort.MergeSort;
 import com.bob.Datastructures.QuickSort.QuickSort;
-import com.bob.Datastructures.Recursion.Recursion;
 import com.bob.Datastructures.SelectionSort.SelectionSortArray;
 import com.bob.Datastructures.ShellSort.ShellSortArray;
-import com.bob.Datastructures.Utils.ArrayGenerator;
-import com.bob.Datastructures.Utils.SortingInterface;
 import com.bob.Datastructures.Utils.SortingUtil;
 
 public class App 
@@ -57,6 +54,12 @@ public class App
     	sortingUtil.print(sortingUtil.sort(sortingUtil.arrayGen(new int [1000])));
     }
     
+    //Radix sort
+    static void radixSort() {
+    	SortingUtil sortingUtil  = new RadixSort();
+    	sortingUtil.print(sortingUtil.sort(sortingUtil.arrayGen(new int [1000])));
+    }
+    
     public static void main( String[] args )
     {
     	//bubbleSorting();
@@ -66,7 +69,8 @@ public class App
     	//System.out.println(Recursion.recursion(3));
     	//mergeSorting();
     	//quickSorting();
-    	countSorting();
+    	//countSorting();
+    	radixSort();
     }
 
 }
