@@ -5,8 +5,9 @@ import java.util.stream.IntStream;
 import com.bob.Datastructures.Utils.SortingInterface;
 import com.bob.Datastructures.Utils.SwapUtil;
 
-public class SelectionSortArray<T extends Comparable<T>> implements SortingInterface {
-
+public class SelectionSortArray<T extends Comparable<T>> implements SortingInterface{
+	
+	@Override
 	public Object[] sort(Object[] unsortedArray) {
 		for (int lastIndex = unsortedArray.length - 1; lastIndex > 0; lastIndex--) {
 			int largest = 0;
@@ -25,6 +26,7 @@ public class SelectionSortArray<T extends Comparable<T>> implements SortingInter
 	// method two using streams
 	public Object[] sortUsingStreams(Object[] unsortedArray) {
 		IntStream.range(0, unsortedArray.length).forEach(i -> IntStream.range(i, unsortedArray.length)
+				//((Comparable<T>) unsortedArray[left]).compareTo((T) unsortedArray[right])
 				.reduce((left, right) -> ((Comparable<T>) unsortedArray[left]).compareTo((T) unsortedArray[right]) < 0
 						? left
 						: right)
@@ -35,5 +37,8 @@ public class SelectionSortArray<T extends Comparable<T>> implements SortingInter
 				}));
 		return unsortedArray;
 	}
+
+
+
 
 }
