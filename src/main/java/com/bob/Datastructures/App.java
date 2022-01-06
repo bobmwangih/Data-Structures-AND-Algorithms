@@ -8,6 +8,7 @@ import com.bob.Datastructures.CountingSort.CountingSort;
 import com.bob.Datastructures.InsertionSort.InsertionSortArray;
 import com.bob.Datastructures.MergeSort.MergeSort;
 import com.bob.Datastructures.QuickSort.QuickSort;
+import com.bob.Datastructures.Recursion.Recursion;
 import com.bob.Datastructures.SelectionSort.SelectionSortArray;
 import com.bob.Datastructures.ShellSort.ShellSortArray;
 import com.bob.Datastructures.Utils.ArrayUtil;
@@ -39,8 +40,9 @@ public class App {
 	// SHell Sort
 	static void shellSorting() {
 		// SortingInterface sortingInterface = new ShellSortArray();
-		SortingUtil sortingUtil = new ShellSortArray();
-		sortingUtil.print(sortingUtil.sort(sortingUtil.arrayGen(new int[1000])));
+		SortingInterface sortingUtil = new ShellSortArray<>();
+		ArrayUtil.print(sortingUtil.sort(ArrayUtil.arrayGen(new Object[10])));
+		ArrayUtil.print(sortingUtil.sort(new String[] { "la","kenya", "azimio", "umoja" }));
 	}
 
 	// merge Sort
@@ -71,9 +73,11 @@ public class App {
 	public static void main(String[] args) {
 		//bubbleSorting();
 		// selectionSorting();
-		 insertionSorting();
-		// shellSorting();
+		// insertionSorting();
+		 shellSorting();
 		// System.out.println(Recursion.recursion(3));
+		//System.out.println(Recursion.fibonacci(9));
+		//System.out.println(Arrays.toString(Recursion.sorterBubble(new String [] {"z","k","b","e"})));
 		// mergeSorting();
 		// quickSorting();
 		// countSorting();
