@@ -9,7 +9,11 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Streams {
-
+	
+///   stream  = List.of("a","b","c").stream()
+///	  stream  = Stream.of("a","b","c")
+///	  stream  = Arrays.stream(name of the array)
+	
 	static List<Employee> employees = new ArrayList<>();
 	static {
 		employees.add(new Employee("Bob", "Streamer", 5000, List.of("LAmbda", "Streams")));
